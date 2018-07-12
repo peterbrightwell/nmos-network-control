@@ -1,4 +1,4 @@
-# Documentation for master
+# Documentation for v1.0_rc1
 
  - [Overview](docs/1.0._Overview.md)
  - [Endpoint](docs/2.0._Endpoint.md)
@@ -6,7 +6,7 @@
  - [Network Device](docs/4.0._Network_Device.md)
  - [Network Links](docs/5.0._Network_Links.md)
 
-## APIs for master
+## APIs for v1.0_rc1
  - [NetworkControlAPI](html-APIs/NetworkControlAPI.html)
 
 ### [JSON Schemas](html-APIs/schemas/)
