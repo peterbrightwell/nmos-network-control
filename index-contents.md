@@ -21,3 +21,5 @@
 
 [v1.0_rc1](tags/v1.0_rc1/)
 
+[v1.0_spec](tags/v1.0_spec/)
+
