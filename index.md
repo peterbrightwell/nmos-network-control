@@ -10,7 +10,25 @@ See [here](https://amwa-tv.github.io/nmos) for an overview of NMOS specifcations
 
 The formal IS-06 specification is provided at in [this GitHub repository](https://github.com/AMWA-TV/nmos-network-control). These pages provide supporting documentation and HTML renders of the APIs (which are specified in RAML and JSON Schema).
 
-The links immediately below are for the _most recent approved release_ of the Specification (which may be earlier than what is shown by the default branch on the GitHub repo). Links to other releases (tags) and other branches appear later in the page.
+The links immediately below are for the _most recent approved release_ of the Specification (which may be earlier than what is shown by the default branch on the GitHub repo).  Links to [other releases (tags)](tags/) and [other branches](branches/) appear later in the page, or from the header.
+
+# Documentation for v1.0_spec
+
+- [Overview](tags/v1.0_spec/docs/1.0._Overview.md)
+- [Endpoint](tags/v1.0_spec/docs/2.0._Endpoint.md)
+- [Network Flow](tags/v1.0_spec/docs/3.0._Network_Flow.md)
+- [Network Device](tags/v1.0_spec/docs/4.0._Network_Device.md)
+- [Network Links](tags/v1.0_spec/docs/5.0._Network_Links.md)
+
+## APIs for v1.0_spec
+
+- [NetworkControlAPI](tags/v1.0_spec/html-APIs/NetworkControlAPI.html)
+
+### [JSON Schemas](tags/v1.0_spec/html-APIs/schemas/)
+
+
+### [Examples](tags/v1.0_spec/examples/)
+
 
 ## Branches
 
