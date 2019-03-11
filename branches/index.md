@@ -3,3 +3,5 @@
 # Branches
 
 [master](master/)
+
+[v1.0.x](v1.0.x/)

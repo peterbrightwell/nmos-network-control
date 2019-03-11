@@ -35,6 +35,8 @@ The documenation and API links immediately below, and the links in the page head
 
 [master](branches/master/)
 
+[v1.0.x](branches/v1.0.x/)
+
 ## Tags (Releases)
 
 [v1.0_rc1](tags/v1.0_rc1/)
