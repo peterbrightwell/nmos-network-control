@@ -2,15 +2,15 @@
 
 # JSON Schemas for v1.0_spec
 
-- [endpoint-patch](endpoint-patch.json)
 - [endpoint](endpoint.json)
+- [endpoint-patch](endpoint-patch.json)
 - [endpoints](endpoints.json)
 - [error](error.json)
 - [network-device](network-device.json)
 - [network-devices](network-devices.json)
+- [network-flow](network-flow.json)
 - [network-flow-patch](network-flow-patch.json)
 - [network-flow-receivers](network-flow-receivers.json)
-- [network-flow](network-flow.json)
 - [network-flows](network-flows.json)
 - [network-link](network-link.json)
 - [network-links](network-links.json)
