@@ -20,31 +20,76 @@ function extract {
         fi
         if [ -d APIs ]; then
             cd APIs
-                echo "NB: including workaround for how v6 of raml2html deals with \$ref and schemas/ dir"
-                perl -pi.orig -e 's=("\$ref": ")(.*)(\.json)=$1schemas/$2$3=' schemas/*.json
+                cd schemas
+                    mkdir with-refs resolved
+                    for i in *.json; do
+                        echo "Resolving schema references for $i"
+                        if ! ../../../resolve-schema.py $i > resolved/$i ; then
+                            echo "WARNING: Resolving failed: resolved/$i may include \$refs"
+                            cp $i resolved/$i
+                        fi
+                        mv $i with-refs/
+                        cp resolved/$i $i
+                    done
+                    cd ..
                 for i in *.raml; do
-                    echo "Generating HTML from $i..."
-                    raml2html $i > "${i%%.raml}.html"
-                done
-                for i in schemas/*.json.orig; do
-                    mv "$i" "${i%%.orig}"
+                    HTML_API=${i%%.raml}.html
+                    echo "Generating $HTML_API from $i..."
+                    cat << EOF > "$HTML_API"
+---
+layout: default
+title: API $i
+---
+EOF
+                    raml2html -p --theme raml2html-nmos-theme $i >> "$HTML_API"
                 done
                 mkdir "../../$target_dir/html-APIs"
                 mv *.html "../../$target_dir/html-APIs/"
+                cp ../../json-formatter.js "../../$target_dir/html-APIs/"
+
                 if [ -d schemas ]; then
-                    echo "Linting schemas..."
-                    jsonlint -v schemas/*.json
-                    echo "Copying schemas..."
+                    echo "Rendering with-refs schemas..."
+                    mkdir schemas/with-refs
+                    for i in schemas/with-refs/*.json; do
+                        HTML_SCHEMA=${i%%.json}.html
+                        # echo "Generating $HTML_SCHEMA from $i..."
+                        ../../render-json.sh "$i" "Schema ${i##*/}" "../../${HTML_SCHEMA/with-refs/resolved}" "Resolve referenced schemas" > "$HTML_SCHEMA"
+                    done
+                    echo "Rendering resolved schemas..."
+                    mkdir schemas/resolved
+                    for i in schemas/resolved/*.json; do
+                        HTML_SCHEMA=${i%%.json}.html
+                        # echo "Generating $HTML_SCHEMA from $i..."
+                        ../../render-json.sh "$i" "Schema ${i##*/}" "../../${HTML_SCHEMA/resolved/with-refs}" "Show referenced schemas with \$ref" > "$HTML_SCHEMA"
+                    done
+                    echo "Moving schemas..."
                     mkdir "../../$target_dir/html-APIs/schemas"
-                    cp schemas/*.json "../../$target_dir/html-APIs/schemas"
+                    mkdir "../../$target_dir/html-APIs/schemas/with-refs"
+                    cp ../../json-formatter.js "../../$target_dir/html-APIs/schemas/with-refs"
+                    mv schemas/with-refs/*.html "../../$target_dir/html-APIs/schemas/with-refs"
+                    mkdir "../../$target_dir/html-APIs/schemas/resolved"
+                    cp ../../json-formatter.js "../../$target_dir/html-APIs/schemas/resolved"
+                    mv schemas/resolved/*.html "../../$target_dir/html-APIs/schemas/resolved"
+                    echo "Tidying..."
+                    # Restore things how they were to ensure next checkout doesn't overwrite
+                    mv schemas/with-refs/*.json schemas/ 
+                    rm -rf schemas/with-refs schemas/resolved
                 fi
                 cd ..
         fi
         if [ -d examples ]; then
             echo "Linting examples..."
             jsonlint -v examples/*.json
-            echo "Copying examples..."
-            cp -r examples "../$target_dir"
+            echo "Rendering examples..."
+            for i in examples/*.json; do
+               HTML_EXAMPLE=${i%%.json}.html 
+               # echo "Rendering $HTML_EXAMPLE from $i..." 
+               ../render-json.sh $i "Example ${i##*/}" >> "$HTML_EXAMPLE"
+            done
+            echo "Moving examples..."
+            mkdir "../$target_dir/examples"
+            mv examples/*.html "../$target_dir/examples"
+            cp ../json-formatter.js "../$target_dir/examples"
         fi
     cd ..
 }

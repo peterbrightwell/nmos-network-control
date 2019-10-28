@@ -1,0 +1,85 @@
+---
+layout: default
+title: Schema network-flow-patch.json
+---
+
+<html>
+<meta charset="UTF-8">
+<h2>Schema network-flow-patch.json</h2>
+<p>
+    <a href="../../schemas/resolved/network-flow-patch.html">Resolve referenced schemas</a>
+</p>
+<div id="json-render">
+<script type="text/javascript" src="json-formatter.js"></script>
+<script>
+const formatter = new JSONFormatter.default(
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Describes a patch of a network flow.",
+  "title": "Network flow with attributes that can be patched",
+  "properties": {
+    "bandwidth": {
+      "type": "string",
+      "description": "Average bandwidth requirement for the flow. Format as number followed by kbit/s, Mbit/s, Gbit/s.",
+      "pattern": "^(?:0.|[1-9][0-9]*[.])?[0-9]+[kMG]bit\/s$"
+    },
+    "profile": {
+      "description": "The transmission profile of the flow.",
+      "type": "string",
+      "enum": [
+        "constant-rate",
+        "SMPTE-2110-21-narrow",
+        "SMPTE-2110-21-wide",
+        "unknown"
+      ]
+    },
+    "forward_flow": {
+      "description": "Flag for forwarding the flow. If false, the network should not set up the flow. Only when this flag is changed to true should the flow be sent to all receivers.",
+      "type": "boolean",
+      "default": true
+    },
+    "dscp": {
+      "type": "string",
+      "description": "DSCP based QoS metrics number, default is CS0, best effort.",
+      "enum": [
+        "CS0",
+        "CS1",
+        "CS2",
+        "CS3",
+        "CS4",
+        "CS5",
+        "CS6",
+        "CS7",
+        "AF11",
+        "AF12",
+        "AF13",
+        "AF21",
+        "AF22",
+        "AF23",
+        "AF31",
+        "AF32",
+        "AF33",
+        "AF41",
+        "AF42",
+        "AF43",
+        "EF"
+      ]
+    },
+    "label": {
+      "description": "Freeform string label for the network-flow",
+      "type": "string"
+    }
+  }
+}
+,
+    3, // Collapse depth
+    {
+        pathsToCollapse: [
+            "properties.id"
+        ]
+    });
+document.getElementsByClassName("content")[0].appendChild(formatter.render());
+</script>
+</div>
+</html>

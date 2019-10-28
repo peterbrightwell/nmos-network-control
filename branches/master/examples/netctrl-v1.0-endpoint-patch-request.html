@@ -1,0 +1,28 @@
+---
+layout: default
+title: Example netctrl-v1.0-endpoint-patch-request.json
+---
+
+<html>
+<meta charset="UTF-8">
+<h2>Example netctrl-v1.0-endpoint-patch-request.json</h2>
+<div id="json-render">
+<script type="text/javascript" src="json-formatter.js"></script>
+<script>
+const formatter = new JSONFormatter.default(
+{
+  "ip_address": "10.18.34.24",
+  "max_bandwidth": "10Gbit/s",
+  "role": "both"
+}
+,
+    3, // Collapse depth
+    {
+        pathsToCollapse: [
+            "properties.id"
+        ]
+    });
+document.getElementsByClassName("content")[0].appendChild(formatter.render());
+</script>
+</div>
+</html>

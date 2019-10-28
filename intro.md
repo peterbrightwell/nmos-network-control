@@ -1,5 +1,3 @@
-# AMWA IS-06 NMOS Network Control Specification
-
 IS-06 is an AMWA NMOS Specification for API control of a managed network.
 
 It has been developed by the [Advanced Media Workflow Association](https://www.amwa.tv) as part of the [Networked Media Open Specifications](https://www.nmos.tv) initative.
