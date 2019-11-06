@@ -1,27 +1,28 @@
 ---
 layout: default
-title: Example netctrl-v1.0-network-flow-put.json
+title: Example netctrl-network-flow-id-get-200.json
 ---
 
 <html>
 <meta charset="UTF-8">
-<h2>Example netctrl-v1.0-network-flow-put.json</h2>
+<h2>Example netctrl-network-flow-id-get-200.json</h2>
 <div id="json-render">
 <script type="text/javascript" src="json-formatter.js"></script>
 <script>
 const formatter = new JSONFormatter.default(
 {
-  "id": "1650fbcc-d8a0-4bd2-8e61-c7abb38d78d2",
-  "multicast_address": "227.1.1.1",
-  "sender_endpoint_id": "76beb838-3ad7-4011-bd68-5c203a4446ab",
+  "id": "c386ff15-3b3f-4813-ac86-1c7b8cf753b6",
+  "multicast_address": "226.1.1.1",
+  "sender_endpoint_id": "a9ab3d49-3b8f-49e1-bbe4-b46228a9e167",
   "receiver_endpoint_ids": [
-    "3f80b3fa-74e3-4dcc-a1c0-5dbf5a199e20"
+    "231ea016-1553-4488-8c2b-26bee7b9a1aa",
+    "7e54a194-45e7-44e6-8795-b3a21bfff253"
   ],
   "bandwidth": "4Gbit/s",
-  "profile": "constant-rate",
-  "forward_flow": false,
-  "dscp": "AF11",
-  "label": "New video network-flow"
+  "profile": "SMPTE-2110-21-wide",
+  "forward_flow": true,
+  "dscp": "AF12",
+  "label": "Sample Video network flow"
 }
 ,
     3, // Collapse depth
