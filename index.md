@@ -15,32 +15,28 @@ The formal IS-06 specification is provided in [this GitHub repository](https://g
 The documentation and API links immediately below, and the links in the page heading, are for the _most recent approved release_ of the Specification (which may be earlier than what is shown by the default branch on the GitHub repo). Links to [other releases (tags)](tags/) and [other branches](branches/) appear later in the page, or under "VERSIONS..." in the page heading.
 
 
-## Documentation for release/tag v1.0_spec
+## Documentation for release/tag v1.0
 
-- [Overview](tags/v1.0_spec/docs/1.0._Overview.md)
-- [Endpoint](tags/v1.0_spec/docs/2.0._Endpoint.md)
-- [Network Flow](tags/v1.0_spec/docs/3.0._Network_Flow.md)
-- [Network Device](tags/v1.0_spec/docs/4.0._Network_Device.md)
-- [Network Links](tags/v1.0_spec/docs/5.0._Network_Links.md)
+- [Overview](tags/v1.0/docs/1.0._Overview.md)
+- [Endpoint](tags/v1.0/docs/2.0._Endpoint.md)
+- [Network Flow](tags/v1.0/docs/3.0._Network_Flow.md)
+- [Network Device](tags/v1.0/docs/4.0._Network_Device.md)
+- [Network Links](tags/v1.0/docs/5.0._Network_Links.md)
 
-## APIs for release/tag v1.0_spec
+## APIs for release/tag v1.0
 
-- [NetworkControlAPI](tags/v1.0_spec/html-APIs/NetworkControlAPI.html)
+- [NetworkControlAPI](tags/v1.0/html-APIs/NetworkControlAPI.html)
 
-### [JSON Schemas](tags/v1.0_spec/html-APIs/schemas/)
+### [JSON Schemas](tags/v1.0/html-APIs/schemas/)
 
 
-### [Examples](tags/v1.0_spec/examples/)
+### [Examples](tags/v1.0/examples/)
 
 
 ## Branches
-
-[master](branches/master/)
 
 [v1.0.x](branches/v1.0.x/)
 
 ## Releases/Tags
 
-[v1.0_rc1](tags/v1.0_rc1/)
-
-[v1.0_spec](tags/v1.0_spec/)
+[v1.0](tags/v1.0/)

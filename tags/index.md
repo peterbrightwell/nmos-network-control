@@ -4,6 +4,4 @@
 
 ## Releases/Tags
 
-[v1.0_rc1](v1.0_rc1/)
-
-[v1.0_spec](v1.0_spec/)
+[v1.0](v1.0/)
