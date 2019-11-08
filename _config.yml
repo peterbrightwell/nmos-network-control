@@ -5,8 +5,8 @@ theme: jekyll-theme-primer
 baseurl: /nmos-network-control
 
 # Which relase or branch appears in header links and on the home page
-default_tree: tags/v1.0_spec # alternatively e.g. branches/v1.0.x
+default_tree: tags/v1.0 # alternatively e.g. branches/v1.0.x
 
 # Regex patterns of tags (releases) and branches to show
 show_tags: v[0-9]*\.[0-9]*
-show_branches: v[0-9]*\.[0-9]*|master
+show_branches: v[0-9]*\.[0-9]*
