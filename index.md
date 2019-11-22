@@ -43,28 +43,30 @@ The documentation and API links immediately below, and the links in the page hea
 
 Once AMWA has approved a Specification, its documentation and API links will be for the _most recent approved release_ (which may be earlier than what is shown by the default branch on the GitHub repo).
 
-## Documentation for release/tag v1.0
+## Documentation for branch docs-refactor
 
-- [Overview](tags/v1.0/docs/1.0._Overview.md)
-- [Endpoint](tags/v1.0/docs/2.0._Endpoint.md)
-- [Network Flow](tags/v1.0/docs/3.0._Network_Flow.md)
-- [Network Device](tags/v1.0/docs/4.0._Network_Device.md)
-- [Network Links](tags/v1.0/docs/5.0._Network_Links.md)
+- [Overview](branches/docs-refactor/docs/1.0._Overview.md)
+- [APIs](branches/docs-refactor/docs/2.0._APIs.md)
+  - [Client Side Implementation](branches/docs-refactor/docs/2.1._APIs_-_Client_Side_Implementation.md)
+  - [Server Side Implementation](branches/docs-refactor/docs/2.2._APIs_-_Server_Side_Implementation.md)
+- [Data Model](branches/docs-refactor/docs/3.0._Data_Model.md)
+  - [Endpoint](branches/docs-refactor/docs/3.1._Data_Model_-_Endpoint.md)
+  - [Network Flow](branches/docs-refactor/docs/3.2._Data_Model_-_Network_Flow.md)
+  - [Network Device](branches/docs-refactor/docs/3.3._Data_Model_-_Network_Device.md)
+  - [Network Link](branches/docs-refactor/docs/3.4._Data_Model_-_Network_Link.md)
 
-## APIs for release/tag v1.0
+## APIs for branch docs-refactor
 
-- [NetworkControlAPI](tags/v1.0/html-APIs/NetworkControlAPI.html)
+- [NetworkControlAPI](branches/docs-refactor/html-APIs/NetworkControlAPI.html)
 
-### [JSON Schemas](tags/v1.0/html-APIs/schemas/)
+### [JSON Schemas](branches/docs-refactor/html-APIs/schemas/)
 
 
-### [Examples](tags/v1.0/examples/)
+### [Examples](branches/docs-refactor/examples/)
 
 
 ## Branches
 
-[v1.0.x](branches/v1.0.x/)
+[docs-refactor](branches/docs-refactor/)
 
 ## Releases/Tags
-
-[v1.0](tags/v1.0/)
